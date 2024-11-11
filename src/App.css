@@ -1,0 +1,150 @@
+/* App.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url(./weatherimage.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  padding: 20px;
+}
+
+.container{
+  position: relative;
+  top: -120px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #000;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  width: 200px;
+  outline: none;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  background-color: #004d99;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #003366;
+}
+
+.weather-info {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.weather-info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.weather-info p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.error {
+  color: #ff3333;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .input-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input, button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+
+  .weather-info {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .weather-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .weather-info p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .weather-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .weather-info p {
+    font-size: 0.9rem;
+  }
+}
